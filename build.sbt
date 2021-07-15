@@ -3,7 +3,7 @@ version := "1.0-SNAPSHOT"
 
 enablePlugins(PlayScala, NewRelic)
 
-scalaVersion := "2.13.5"
+scalaVersion := "3.0.2-RC1"
 scalacOptions ++= List("-encoding", "utf8", "-deprecation", "-feature", "-unchecked")
 
 libraryDependencies ++= Seq(
@@ -20,6 +20,16 @@ libraryDependencies ++= Seq(
   ws,
   specs2 % Test,
 )
+
+libraryDependencies := {
+  libraryDependencies.value.map { x =>
+    if (x.organization == "com.typesafe.play" && x.crossVersion.isInstanceOf[CrossVersion.Binary]) {
+      x cross CrossVersion.for3Use2_13
+    } else {
+      x
+    }
+  }
+}
 
 routesGenerator := InjectedRoutesGenerator
 
