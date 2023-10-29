@@ -44,6 +44,16 @@ jobs:
         git clone -o origin https://github.com/playframework/play-generated-docs.git $PWD/data/generated
         sbt ++$MATRIX_SCALA test
 
+  test_scala_3:
+    needs:
+      - "check-docs"
+    uses: playframework/.github/.github/workflows/cmd.yml@v3
+    with:
+      java: 17
+      cmd: |
+        git clone -o origin https://github.com/playframework/play-generated-docs.git $PWD/data/generated
+        sbt "++ 3.x" compile # TODO fix test
+
   finish:
     name: Finish
     if: github.event_name == 'pull_request'
