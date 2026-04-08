@@ -3,11 +3,11 @@ version := "1.0-SNAPSHOT"
 
 enablePlugins(PlayScala)
 
-scalaVersion := "3.3.8"
+scalaVersion := "3.8.4"
 scalacOptions ++= List("-encoding", "utf8", "-deprecation", "-feature", "-unchecked")
 
 libraryDependencies ++= Seq(
-  "org.playframework" %% "play-doc"            % "3.0.1",
+  "org.playframework" %% "play-doc"            % "3.1.0-M1",
   "org.eclipse.jgit"   % "org.eclipse.jgit"    % "7.7.0.202606012155-r",
   "com.damnhandy"      % "handy-uri-templates" % "2.1.8",
   "org.webjars"        % "jquery"              % "4.0.0",

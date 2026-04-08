@@ -1,6 +1,6 @@
 package services.releases
 
-import javax.inject.Provider
+import jakarta.inject.Provider
 import jakarta.inject.Inject
 import jakarta.inject.Singleton
 

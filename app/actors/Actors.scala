@@ -5,7 +5,7 @@ import java.io.File
 import com.google.inject.AbstractModule
 import com.typesafe.config.Config
 import jakarta.inject.Inject
-import javax.inject.Provider
+import jakarta.inject.Provider
 import jakarta.inject.Singleton
 import models.documentation._
 import org.slf4j.LoggerFactory

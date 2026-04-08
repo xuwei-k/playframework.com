@@ -1,7 +1,7 @@
 package controllers.documentation
 
 import jakarta.inject.Inject
-import javax.inject.Provider
+import jakarta.inject.Provider
 import jakarta.inject.Singleton
 import play.api.i18n.Lang
 import play.api.routing.sird._
